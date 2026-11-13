@@ -4,7 +4,10 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import FirebaseAuth from './components/FirebaseAuth';
 import { CampusMapView } from './components/CampusMapView';
+import { auth } from './firebase';
 import { DiscoverView } from './components/DiscoverView';
 import { EventDetailModal } from './components/EventDetailModal';
 import { OrgDetailModal } from './components/OrgDetailModal';
@@ -75,9 +78,12 @@ function readStoredEvents(): CampusEvent[] {
 }
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem('campverse_auth')
+  );
+
   const [activeScreen, setActiveScreen] =
     useState<AppScreenView>('discover');
-
   const navigateToScreen = (screen: ScreenView) => {
     setActiveScreen(screen);
   };
@@ -273,6 +279,40 @@ export default function App() {
         : undefined,
     [selectedEvent]
   );
+
+  const FirebaseAuthWithProps =
+    FirebaseAuth as React.ComponentType<{
+      onAuthenticated?: () => void;
+    }>;
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center px-4">
+        <FirebaseAuthWithProps
+          onAuthenticated={() => {
+            localStorage.setItem('campverse_auth', 'true');
+            setIsAuthenticated(true);
+          }}
+        />
+      </div>
+    );
+  }
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center px-4">
+        <FirebaseAuth
+          onAuthenticated={() => {
+            localStorage.setItem(
+              'campverse_auth',
+              'true'
+            );
+
+            setIsAuthenticated(true);
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-[#0F172A]">
