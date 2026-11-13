@@ -1,5 +1,11 @@
 # ✦ CampVerse
 
+## 🚀 Live Demo
+
+### [✦ Explore CampVerse](https://campverse-d5016.web.app)
+
+Experience the interactive campus discovery platform live.
+
 ### The Digital Campus Experience
 
 > **Discover. Connect. Experience your campus.**
