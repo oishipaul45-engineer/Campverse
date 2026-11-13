@@ -1,0 +1,1354 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #FAF9F6;
+  --color-surface-card: #FFFFFF;
+  --color-primary-violet: #6546E8;
+  --color-primary-violet-hover: #5535D4;
+  --color-primary-deep: #4C25CF;
+  --color-lavender-soft: #EDE9FE;
+  --color-lavender-border: #DDD6FE;
+  --color-electric-blue: #38BDF8;
+  --color-electric-deep: #00668A;
+  --color-ink-primary: #0F172A;
+  --color-ink-body: #334155;
+  --color-ink-muted: #64748B;
+  --color-hairline: #E2E8F0;
+  --color-hairline-subtle: #F1F5F9;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #0F172A;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.cv-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: #DDD6FE;
+  box-shadow: 0 10px 25px -5px rgba(101, 70, 232, 0.08),
+    0 8px 10px -6px rgba(15, 23, 42, 0.03);
+}
+
+.cv-btn-primary {
+  background-color: #6546E8;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-btn-primary:hover {
+  background-color: #5535D4;
+}
+
+.cv-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.cv-btn-subtle {
+  background-color: #EDE9FE;
+  color: #6546E8;
+  border: 1px solid transparent;
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-btn-subtle:hover {
+  background-color: #DDD6FE;
+}
+
+.cv-btn-outline {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-btn-outline:hover {
+  background-color: #FAF9F6;
+  border-color: #CBD5E1;
+}
+
+.cv-input {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.5rem;
+  color: #0F172A;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.cv-input::placeholder {
+  color: #94A3B8;
+}
+
+.cv-input:focus {
+  outline: none;
+  border-color: #6546E8;
+  box-shadow: 0 0 0 3px rgba(101, 70, 232, 0.15);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-card,
+  .cv-card-interactive:hover,
+  .cv-btn-primary,
+  .cv-btn-subtle,
+  .cv-btn-outline {
+    transition: none;
+    transform: none;
+  }
+}
+/* =========================================================
+   CAMPVERSE 3D EXPERIENCE
+   Global visual enhancement
+   ========================================================= */
+
+/* ---------- Smooth scrolling ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Main animated atmosphere ---------- */
+
+body {
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(99, 102, 241, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(14, 165, 233, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(168, 85, 247, 0.08),
+      transparent 28%
+    ),
+    #faf9f6;
+}
+
+/* ---------- Animated background grid ---------- */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(15, 23, 42, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+
+  animation: gridMove 18s linear infinite;
+}
+
+@keyframes gridMove {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(42px, 42px, 0);
+  }
+}
+
+/* =========================================================
+   3D FLOATING LIGHTS
+   ========================================================= */
+
+body::after {
+  content: "";
+  position: fixed;
+
+  width: 420px;
+  height: 420px;
+
+  left: -140px;
+  top: 20%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(129, 140, 248, 0.22),
+      rgba(99, 102, 241, 0.08) 35%,
+      transparent 70%
+    );
+
+  filter: blur(15px);
+
+  pointer-events: none;
+
+  z-index: -4;
+
+  animation:
+    floatingOrb 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatingOrb {
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(120px, -60px, 0)
+      scale(1.15);
+  }
+
+  100% {
+    transform:
+      translate3d(220px, 80px, 0)
+      scale(0.9);
+  }
+}
+
+/* =========================================================
+   GLASS SURFACE
+   ========================================================= */
+
+.glass-panel {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(255, 255, 255, 0.55)
+    );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  transform: translateZ(0);
+
+  transition:
+    transform 0.35s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.glass-panel:hover {
+  transform:
+    translateY(-8px)
+    translateZ(20px);
+
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.13),
+    0 10px 30px rgba(99, 102, 241, 0.08);
+
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================================================
+   3D CARD EFFECT
+   ========================================================= */
+
+.campverse-3d-card {
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.45s ease;
+}
+
+.campverse-3d-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.45),
+      transparent 45%,
+      rgba(99,102,241,0.08)
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+
+  transform: translateZ(1px);
+}
+
+.campverse-3d-card:hover {
+  transform:
+    perspective(1000px)
+    rotateX(2deg)
+    rotateY(-2deg)
+    translateY(-8px)
+    scale(1.015);
+
+  box-shadow:
+    0 35px 70px rgba(15, 23, 42, 0.12);
+}
+
+.campverse-3d-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   FLOATING ELEMENT
+   ========================================================= */
+
+.campverse-float {
+  animation:
+    campverseFloat 5s ease-in-out infinite;
+}
+
+@keyframes campverseFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+/* =========================================================
+   SOFT PULSE
+   ========================================================= */
+
+.campverse-pulse {
+  animation:
+    campversePulse 3s ease-in-out infinite;
+}
+
+@keyframes campversePulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(99, 102, 241, 0.12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 14px rgba(99, 102, 241, 0);
+  }
+}
+
+/* =========================================================
+   PAGE ENTRANCE
+   ========================================================= */
+
+main {
+  animation:
+    campversePageEnter 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes campversePageEnter {
+  from {
+    opacity: 0;
+    transform:
+      translateY(18px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   BUTTON 3D EFFECT
+   ========================================================= */
+
+button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+button:hover {
+  transform:
+    translateY(-2px);
+}
+
+button:active {
+  transform:
+    translateY(1px)
+    scale(0.98);
+}
+
+/* =========================================================
+   IMAGE DEPTH
+   ========================================================= */
+
+img {
+  transition:
+    transform 0.5s cubic-bezier(.2,.8,.2,1),
+    filter 0.5s ease;
+}
+
+img:hover {
+  transform:
+    scale(1.025)
+    translateZ(10px);
+
+  filter:
+    saturate(1.05)
+    contrast(1.02);
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(99, 102, 241, 0.22);
+  color: #0f172a;
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #c7d2fe,
+      #a5b4fc
+    );
+
+  border-radius: 999px;
+
+  border: 3px solid #faf9f6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #818cf8,
+      #6366f1
+    );
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body::before {
+    background-size: 32px 32px;
+  }
+
+  body::after {
+    width: 260px;
+    height: 260px;
+  }
+
+  .campverse-3d-card:hover {
+    transform:
+      translateY(-4px)
+      scale(1.01);
+  }
+
+  .glass-panel:hover {
+    transform:
+      translateY(-4px);
+  }
+}
+/* =========================================================
+   CAMPVERSE — BLACK & GOLD PREMIUM THEME
+   ========================================================= */
+
+/* Main background */
+body {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(212, 175, 55, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255, 215, 0, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(184, 134, 11, 0.10),
+      transparent 30%
+    ),
+    #080808 !important;
+
+  color: #f5f1e6 !important;
+}
+
+/* Animated grid */
+body::before {
+  background-image:
+    linear-gradient(
+      rgba(212, 175, 55, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(212, 175, 55, 0.035) 1px,
+      transparent 1px
+    );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+}
+
+/* Golden floating orb */
+body::after {
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(255, 215, 0, 0.22),
+      rgba(212, 175, 55, 0.08) 35%,
+      transparent 70%
+    );
+}
+
+/* =========================================================
+   GOLDEN GLASS
+   ========================================================= */
+
+.glass-panel {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 30, 30, 0.88),
+      rgba(12, 12, 12, 0.72)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.28);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 215, 0, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 215, 0, 0.55);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    0 10px 35px rgba(212, 175, 55, 0.10),
+    inset 0 1px 0 rgba(255, 215, 0, 0.12);
+}
+
+/* =========================================================
+   3D CARDS
+   ========================================================= */
+
+.campverse-3d-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 28, 28, 0.95),
+      rgba(10, 10, 10, 0.92)
+    );
+
+  border-color: rgba(212, 175, 55, 0.20);
+}
+
+.campverse-3d-card::before {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 215, 0, 0.14),
+      transparent 45%,
+      rgba(212, 175, 55, 0.06)
+    );
+}
+
+.campverse-3d-card:hover {
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.65),
+    0 10px 35px rgba(212, 175, 55, 0.10);
+}
+
+/* =========================================================
+   GOLD FLOAT
+   ========================================================= */
+
+.campverse-float {
+  filter:
+    drop-shadow(
+      0 12px 25px rgba(212, 175, 55, 0.10)
+    );
+}
+
+/* =========================================================
+   GOLD PULSE
+   ========================================================= */
+
+.campverse-pulse {
+  animation:
+    campverseGoldPulse 3s ease-in-out infinite;
+}
+
+@keyframes campverseGoldPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(212, 175, 55, 0.12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 14px rgba(212, 175, 55, 0);
+  }
+}
+
+/* =========================================================
+   PAGE ENTRANCE
+   ========================================================= */
+
+main {
+  animation:
+    campversePageEnter 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes campversePageEnter {
+  from {
+    opacity: 0;
+    transform:
+      translateY(18px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   GOLD BUTTON INTERACTION
+   ========================================================= */
+
+button:hover {
+  filter:
+    drop-shadow(
+      0 4px 12px rgba(212, 175, 55, 0.16)
+    );
+}
+
+/* =========================================================
+   GOLD SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(212, 175, 55, 0.30);
+  color: #ffffff;
+}
+
+/* =========================================================
+   GOLD SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #f5d76e,
+      #d4af37,
+      #a67c00
+    );
+
+  border-radius: 999px;
+
+  border: 3px solid #080808;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #ffe9a3,
+      #f0c94b,
+      #c99a16
+    );
+}
+body {
+  background: #050505 !important;
+  color: #f5d76e !important;
+}
+/* =========================================================
+   CAMPVERSE FINAL BLACK + GOLD OVERRIDE
+   ========================================================= */
+
+:root {
+  --cv-black: #050505;
+  --cv-black-2: #0b0b0b;
+  --cv-panel: #111111;
+  --cv-gold: #d4af37;
+  --cv-gold-light: #f5d76e;
+  --cv-white: #f5f1e6;
+  --cv-muted: #a99c77;
+}
+
+/* APP BACKGROUND */
+html,
+body {
+  background: #050505 !important;
+  color: var(--cv-white) !important;
+}
+
+/* Replace the cream CampVerse background */
+[class*="bg-[#FAF9F6]"] {
+  background-color: #050505 !important;
+}
+
+/* Replace white surfaces */
+[class*="bg-[#FFFFFF]"] {
+  background-color: #0d0d0d !important;
+}
+
+/* Main dark text → light */
+[class*="text-[#0F172A]"] {
+  color: #f5f1e6 !important;
+}
+
+/* Body text → warm gold */
+[class*="text-[#334155]"] {
+  color: #d8c889 !important;
+}
+
+/* Muted text */
+[class*="text-[#64748B]"] {
+  color: #a99c77 !important;
+}
+
+/* Borders */
+[class*="border-[#E2E8F0]"] {
+  border-color: rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Lavender backgrounds → dark gold */
+[class*="bg-[#EDE9FE]"] {
+  background: rgba(212, 175, 55, 0.10) !important;
+}
+
+/* Lavender borders */
+[class*="border-[#DDD6FE]"] {
+  border-color: rgba(212, 175, 55, 0.35) !important;
+}
+
+/* Purple text → gold */
+[class*="text-[#6546E8]"] {
+  color: #f5d76e !important;
+}
+
+/* Purple buttons */
+[class*="bg-[#6546E8]"] {
+  background: linear-gradient(
+    135deg,
+    #f5d76e,
+    #d4af37
+  ) !important;
+
+  color: #050505 !important;
+
+  box-shadow:
+    0 8px 25px rgba(212, 175, 55, 0.20),
+    inset 0 1px 0 rgba(255,255,255,0.35) !important;
+}
+
+/* Purple hover */
+[class*="hover:bg-[#5535D4]"]:hover {
+  background: linear-gradient(
+    135deg,
+    #ffe9a3,
+    #d4af37
+  ) !important;
+}
+
+/* Cards */
+.cv-card {
+  background:
+    linear-gradient(
+      145deg,
+      #151515,
+      #090909
+    ) !important;
+
+  border-color: rgba(212, 175, 55, 0.22) !important;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,215,0,0.06) !important;
+}
+
+.cv-card:hover {
+  transform:
+    translateY(-6px)
+    perspective(1000px)
+    rotateX(2deg)
+    rotateY(-2deg) !important;
+
+  border-color: rgba(245, 215, 110, 0.60) !important;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.70),
+    0 10px 35px rgba(212,175,55,0.12) !important;
+}
+
+/* Inputs */
+.cv-input {
+  background: #0c0c0c !important;
+  color: #f5f1e6 !important;
+  border-color: rgba(212,175,55,0.30) !important;
+}
+
+.cv-input::placeholder {
+  color: #8f845f !important;
+}
+
+.cv-input:focus {
+  border-color: #d4af37 !important;
+
+  box-shadow:
+    0 0 0 3px rgba(212,175,55,0.12),
+    0 0 25px rgba(212,175,55,0.08) !important;
+}
+
+/* Outline buttons */
+.cv-btn-outline {
+  background: #0b0b0b !important;
+  color: #f5d76e !important;
+  border-color: rgba(212,175,55,0.30) !important;
+}
+
+.cv-btn-outline:hover {
+  background: #151515 !important;
+  border-color: #d4af37 !important;
+}
+
+/* Subtle buttons */
+.cv-btn-subtle {
+  background: rgba(212,175,55,0.10) !important;
+  color: #f5d76e !important;
+}
+
+.cv-btn-subtle:hover {
+  background: rgba(212,175,55,0.18) !important;
+}
+
+/* Footer */
+footer {
+  background: #050505 !important;
+  border-color: rgba(212,175,55,0.20) !important;
+}
+
+/* Gold headings */
+h1,
+h2,
+h3 {
+  text-shadow:
+    0 0 25px rgba(212,175,55,0.08);
+}
+
+/* Make images feel 3D */
+img {
+  transition:
+    transform 0.5s cubic-bezier(.2,.8,.2,1),
+    filter 0.5s ease,
+    box-shadow 0.5s ease !important;
+}
+
+img:hover {
+  transform:
+    translateY(-4px)
+    scale(1.025) !important;
+
+  filter:
+    saturate(1.08)
+    contrast(1.04) !important;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.45) !important;
+}
+
+/* Gold glow for interactive elements */
+button:hover {
+  filter:
+    drop-shadow(
+      0 5px 15px rgba(212,175,55,0.22)
+    ) !important;
+}
+
+/* Gold links */
+a:hover {
+  color: #f5d76e !important;
+}
+
+/* Better dark selection */
+::selection {
+  background: #d4af37 !important;
+  color: #050505 !important;
+}
+/* =========================================================
+   CAMPVERSE — UNIQUE HEADING FONT
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Space Grotesk", sans-serif !important;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+/* Main hero headings */
+h1 {
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+/* Gold premium heading effect */
+h1,
+h2 {
+  color: #f5f1e6;
+  text-shadow:
+    0 0 30px rgba(212, 175, 55, 0.10);
+}
+
+/* Gold highlight when heading is hovered */
+h1:hover,
+h2:hover {
+  text-shadow:
+    0 0 25px rgba(212, 175, 55, 0.22);
+}
+/* =========================================================
+   CAMPVERSE — SIGNATURE DISPLAY TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Syne", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.055em !important;
+  line-height: 0.95 !important;
+}
+
+/* Hero / biggest headings */
+h1 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  letter-spacing: -0.075em !important;
+
+  background: linear-gradient(
+    110deg,
+    #fff8dc 0%,
+    #f5d76e 35%,
+    #d4af37 65%,
+    #fff1a8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+
+  text-shadow: none;
+
+  filter:
+    drop-shadow(0 12px 30px rgba(212,175,55,0.12));
+}
+
+/* Section headings */
+h2 {
+  letter-spacing: -0.06em !important;
+
+  background: linear-gradient(
+    110deg,
+    #ffffff,
+    #f5d76e,
+    #d4af37
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Smaller headings */
+h3,
+h4 {
+  letter-spacing: -0.04em !important;
+}
+
+/* Cinematic entrance */
+h1 {
+  animation:
+    campverseTitleReveal
+    0.9s
+    cubic-bezier(.16,1,.3,1)
+    both;
+}
+
+@keyframes campverseTitleReveal {
+  from {
+    opacity: 0;
+    transform:
+      translateY(30px)
+      scale(0.96);
+    filter:
+      blur(10px)
+      drop-shadow(0 0 0 transparent);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+    filter:
+      blur(0)
+      drop-shadow(0 12px 30px rgba(212,175,55,0.12));
+  }
+}
+
+/* Gold shimmer when hovering */
+h1:hover {
+  background-size: 200% auto;
+
+  animation:
+    campverseGoldShimmer
+    2.5s
+    linear
+    infinite;
+}
+
+@keyframes campverseGoldShimmer {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
+/* =========================================================
+   CAMPVERSE — ONE LINE SIGNATURE HEADING
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.025em !important;
+  line-height: 1 !important;
+}
+
+/* Main heading */
+h1 {
+  white-space: nowrap !important;
+
+  font-size: clamp(3rem, 7vw, 7rem) !important;
+
+  background: linear-gradient(
+    100deg,
+    #fff8dc,
+    #f5d76e,
+    #d4af37,
+    #fff1a8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+
+  filter:
+    drop-shadow(0 8px 25px rgba(212,175,55,0.15));
+
+  transform-origin: left center;
+
+  animation:
+    campverseHeadingIn
+    0.8s
+    cubic-bezier(.16,1,.3,1)
+    both;
+}
+
+@keyframes campverseHeadingIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+    letter-spacing: 0.15em;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    letter-spacing: 0.025em;
+  }
+}
+
+/* Subtle metallic movement */
+h1:hover {
+  background-size: 200% auto;
+
+  animation:
+    campverseMetallic
+    2s
+    linear
+    infinite;
+}
+
+@keyframes campverseMetallic {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Mobile safety */
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem) !important;
+  }
+}
+/* =========================================================
+   CAMPVERSE — PERFECT ONE-LINE HEADING
+   ========================================================= */
+
+h1 {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-weight: 400 !important;
+
+  /* Automatically fits the screen */
+  font-size: clamp(2.4rem, 8vw, 6rem) !important;
+
+  letter-spacing: 0.015em !important;
+  line-height: 0.95 !important;
+
+  /* NEVER wrap */
+  white-space: nowrap !important;
+
+  /* Keep entire heading inside screen */
+  width: 100% !important;
+  max-width: 100% !important;
+
+  overflow: visible !important;
+
+  /* Prevent accidental horizontal page overflow */
+  transform-origin: center center;
+
+  text-align: center !important;
+
+  background: linear-gradient(
+    100deg,
+    #fff8dc,
+    #f5d76e,
+    #d4af37,
+    #fff1a8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent !important;
+
+  filter:
+    drop-shadow(
+      0 8px 25px rgba(212,175,55,0.15)
+    );
+}
+
+/* Make the heading container wide enough */
+h1,
+h1 * {
+  box-sizing: border-box;
+}
+
+/* Prevent the main content from creating horizontal scrolling */
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Smaller screens */
+@media (max-width: 900px) {
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 4.5rem) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(2rem, 9vw, 3.5rem) !important;
+    letter-spacing: 0 !important;
+  }
+}
+/* =========================================================
+   FINAL HEADING WIDTH FIX
+   ========================================================= */
+
+h1 {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-weight: 400 !important;
+
+  /* Smaller so the complete text fits */
+  font-size: clamp(2rem, 5vw, 4.5rem) !important;
+
+  letter-spacing: 0.01em !important;
+  line-height: 1 !important;
+
+  white-space: nowrap !important;
+
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  text-align: center !important;
+
+  transform: none !important;
+
+  background: linear-gradient(
+    90deg,
+    #fff8dc,
+    #f5d76e,
+    #d4af37,
+    #fff8dc
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Stop the website itself from becoming wider than the screen */
+html,
+body,
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Main content */
+main {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "CampVerse Campus Discovery",
+  "description": "A collegiate discovery platform for campus events, student organizations, personal schedules, and interactive campus building maps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

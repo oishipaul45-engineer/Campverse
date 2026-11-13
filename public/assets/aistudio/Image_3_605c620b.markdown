@@ -1,0 +1,229 @@
+---
+name: CampVerse Campus Discovery
+colors:
+  surface: '#faf8ff'
+  surface-dim: '#d2d9f4'
+  surface-bright: '#faf8ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f2f3ff'
+  surface-container: '#eaedff'
+  surface-container-high: '#e2e7ff'
+  surface-container-highest: '#dae2fd'
+  on-surface: '#131b2e'
+  on-surface-variant: '#484555'
+  inverse-surface: '#283044'
+  inverse-on-surface: '#eef0ff'
+  outline: '#797587'
+  outline-variant: '#c9c4d8'
+  surface-tint: '#5e3ee1'
+  primary: '#4c25cf'
+  on-primary: '#ffffff'
+  primary-container: '#6546e8'
+  on-primary-container: '#e6dfff'
+  inverse-primary: '#c9beff'
+  secondary: '#00668a'
+  on-secondary: '#ffffff'
+  secondary-container: '#40c2fd'
+  on-secondary-container: '#004d6a'
+  tertiary: '#4e496a'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#666183'
+  on-tertiary-container: '#e6dfff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#e5deff'
+  primary-fixed-dim: '#c9beff'
+  on-primary-fixed: '#1b0063'
+  on-primary-fixed-variant: '#4619c9'
+  secondary-fixed: '#c4e7ff'
+  secondary-fixed-dim: '#7bd0ff'
+  on-secondary-fixed: '#001e2c'
+  on-secondary-fixed-variant: '#004c69'
+  tertiary-fixed: '#e5deff'
+  tertiary-fixed-dim: '#c8c2e9'
+  on-tertiary-fixed: '#1b1735'
+  on-tertiary-fixed-variant: '#474363'
+  background: '#faf8ff'
+  on-background: '#131b2e'
+  surface-variant: '#dae2fd'
+typography:
+  display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+    letterSpacing: -0.03em
+  display-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.025em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 26px
+    fontWeight: '600'
+    lineHeight: 34px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.015em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: -0.01em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  code:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-sm: 1rem
+  margin: 2rem
+  margin-sm: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system establishes a high-craft, modern product identity tailored for collegiate discovery. The visual style balances academic ambition with dynamic social connection. 
+
+Drawing from modern precision SaaS aesthetics (Linear, Framer), the system uses generous negative space, crisp micro-borders, refined badge pills, and intentional typographic hierarchy. Rather than feeling juvenile or overly corporate, the UI conveys focus, energy, and institutional legitimacy without stiffness. Visual accents stay disciplined—allowing student-generated event photography, club marks, and contextual metadata to lead the interface.
+
+## Colors
+
+The palette grounds itself in a tactile, warm off-white canvas (`#FAF9F6`), pairing elevated pure white card surfaces against subtle slate boundaries.
+
+- **Primary Violet (`#6546E8`)**: Anchors critical actions, high-intent states, active selections, and brand moments.
+- **Electric Blue Accent (`#38BDF8`)**: Reserved for live indicators, real-time RSVP pings, active tracks, and energetic interaction cues.
+- **Soft Lavender Tiers (`#EDE9FE`, `#DDD6FE`)**: Used for soft tonal tags, sub-navigation active states, and pill badges without overpowering text.
+- **Neutrals**:
+  - `slate-900` (`#0F172A`): Primary headings and high-priority data points.
+  - `slate-700` (`#334155`): Body copy and primary labels.
+  - `slate-500` (`#64748B`): Secondary timestamps, metadata, and empty states.
+  - `slate-200` (`#E2E8F0`): Hairline structural dividers and micro-borders.
+  - `card-surface` (`#FFFFFF`): Elevated content planes.
+
+## Typography
+
+The pairing combines the open geometry and approachable curves of **Plus Jakarta Sans** for headlines with the neutral, engineered legibility of **Inter** for UI controls, dense directory lists, and body copy.
+
+- **Headlines**: Tight negative tracking (`-0.01em` to `-0.03em`) produces an editorial, polished SaaS feel.
+- **Numbers & Metrics**: Numerical counters, dates, and attendee capacities inherit `Inter` tabular figures (`tnum`) to maintain clean alignment in scannable cards and leaderboards.
+- **Labels & Badges**: Small caps or uppercase tokens maintain `0.02em` to `0.04em` letter spacing for immediate visual clarity at 11px and 12px.
+
+## Layout & Spacing
+
+The layout model runs on an 8pt structural baseline, wrapped in a 12-column responsive fluid grid pinned to a max container width of `1280px`.
+
+- **Desktop (1024px+)**: 12 columns, `1.5rem` (`24px`) gutters, `2rem` (`32px`) screen margin. Multi-column feeds display cards in 3- or 4-column configurations.
+- **Tablet (768px - 1023px)**: 8 columns, `1.5rem` gutters, `1.5rem` screen margin. Sidebars collapse to slide-out sheets or top contextual chips.
+- **Mobile (< 768px)**: 4 columns, `1rem` (`16px`) gutters, `1rem` screen margin. Cards and lists stretch to 4-column full width, with bottom-anchored action bars.
+
+Padding inside components adheres to the `space-*` scale:
+- Dense table rows and inline badges use `space-xs` and `space-sm`.
+- Form inputs, buttons, and list rows use `space-sm` vertical and `space-md` horizontal.
+- Elevated cards feature uniform internal padding of `space-lg` (`1.5rem`).
+
+## Elevation & Depth
+
+This system avoids dark, heavy drop shadows in favor of ambient multi-stop diffusion paired with crisp hairline borders.
+
+- **Base Layer (`#FAF9F6`)**: The foundational canvas texture.
+- **Surface Layer 1 (`#FFFFFF`)**: Flat cards and tables. Layer depth is defined via a 1px solid border in `#E2E8F0` and an ultra-subtle ambient drop: `0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02)`.
+- **Surface Layer 2 (Hover & Active Cards)**: Lifted cards transition border color to `#DDD6FE` and introduce a soft, diffused violet-tinted shadow: `0 10px 25px -5px rgba(101, 70, 232, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03)`.
+- **Surface Layer 3 (Dropdowns, Popovers, Drawers)**: High-level floating UI features clean `#FFFFFF` backing, `#E2E8F0` hairline boundary, and `0 20px 30px -10px rgba(15, 23, 42, 0.10)`.
+- **Overlays**: Glassmorphism is used exclusively for sticky navigational headers and filtering docks: `backdrop-filter: blur(12px)` over `rgba(250, 249, 246, 0.8)`.
+
+## Shapes
+
+The design uses standard rounded geometry (`0.5rem` / `8px` default radius) for interactive predictability, stepping up to `1rem` (`16px`) for larger content groupings.
+
+- **Base Elements (Buttons, Inputs, Selectors)**: `8px` border radius (`rounded`).
+- **Cards, Panels, & Modals**: `16px` border radius (`rounded-lg`), delivering a soft, inviting boundary for feed items and event hero cards.
+- **Pills & Badges**: Fully rounded (`9999px`) for status tags, club category pills, and micro-avatars.
+
+## Components
+
+### Buttons
+- **Primary**: Background `#6546E8`, text `#FFFFFF`, 1px border `transparent`, subtle inner top-highlight `inset 0 1px 0 rgba(255,255,255,0.2)`. Hover: `#5535D4`. Active: transform scale `0.98`.
+- **Secondary / Subtle**: Background `#EDE9FE`, text `#6546E8`, border `transparent`. Hover: `#DDD6FE`.
+- **Outline**: Background `#FFFFFF`, text `#0F172A`, 1px border `#E2E8F0`. Hover: `#FAF9F6`, border `#CBD5E1`.
+
+### Badge Pills & Tags
+- Used for categories (e.g., "Greek Life", "Hackathon", "Design Club").
+- Height: 24px, pill-radius (`9999px`), padding: `0 10px`.
+- Default: `#FAF9F6` background, `#334155` text, 1px border `#E2E8F0`.
+- Highlight/Live: `#EDE9FE` background, `#6546E8` text with an optional 6px pulsing dot in `#38BDF8`.
+
+### Input Fields & Search
+- Height: 40px (regular), 48px (hero search).
+- Background `#FFFFFF`, border `1px solid #E2E8F0`, corner radius `8px`.
+- Text color `#0F172A`, placeholder `#94A3B8`.
+- Focus state: Border color `#6546E8`, outer ring `0 0 0 3px rgba(101, 70, 232, 0.15)`.
+
+### Cards (Events & Organizations)
+- Structure: `#FFFFFF` surface, `1px solid #E2E8F0`, `16px` corner radius, `space-lg` inner padding.
+- Visual elements: 16:9 aspect-ratio media banner, followed by title in `headline-sm`, metadata row (date, campus building, attendee count) in `body-sm` (`#64748B`), and an RSVP toggle button.
+- Interaction: Smooth transition on hover with a `2px` upward translation and violet ambient glow.
+
+### Checkboxes & Radios
+- Size: 16px × 16px.
+- Unchecked: Background `#FFFFFF`, border `1.5px solid #CBD5E1`, radius `4px` (checkbox) or `9999px` (radio).
+- Checked: Background `#6546E8`, border color `#6546E8`, crisp white vector tick or centered dot.
+
+### Lists & Directories
+- Borderless rows separated by `1px solid #F1F5F9`.
+- Includes avatar/club crest slot (40px, rounded-md), primary title, trailing category pill, and direct bookmark/join action.
